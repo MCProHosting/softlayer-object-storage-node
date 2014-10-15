@@ -1,4 +1,4 @@
-var storage = require("./storage.js");
+var storage = require("./lib/main.js");
 var config = require("./config.js");
 
 storage.login(config.endpoint, config.username, config.api_key,  function(connection) {

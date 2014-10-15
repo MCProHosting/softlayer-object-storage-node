@@ -1,0 +1,21 @@
+{
+	"name": "SoftLayer Object Storage Interface",
+	"version": "1.0.0",
+	"description": "Interface for SoftLayer's Object storage",
+	"main": "./lib/main.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"softlayer",
+		"api",
+		"client",
+		"library"
+	],
+	"author": "Mark Dietzer",
+	"license": "GPLv3",
+	"homepage": "https://beam.pro",
+	"dependencies": {
+	
+	}
+}
