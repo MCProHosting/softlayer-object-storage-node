@@ -3,9 +3,12 @@ var config = require("./config.js");
 
 storage.login(config.endpoint, config.username, config.api_key,  function(connection) {
 	connection.listContainers(function(success, containers) {
-		console.log("L", success, containers);
+		console.log("LC", success, containers.length);
 	});
 	var container = connection.getContainer(config.container);
+	container.listFiles(function(success, files) {
+		console.log("LF", success, files);
+	});
 	container.putFile({
 		filename: "test/test.txt",
 		contents: "Test"
