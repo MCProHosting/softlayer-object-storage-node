@@ -7,16 +7,14 @@ storage.login(config.endpoint, config.username, config.api_key,  function(connec
 	});
 	var container = connection.getContainer(config.container);
 	container.listFiles(function(success, files) {
-		console.log("LF", success, files);
+		console.log("LF", success, files.length);
 	});
-	container.putFile({
-		filename: "test/test.txt",
+	var file = container.getFile("test/test.txt");
+	file.put({
 		contents: "Test"
 	}, function(success, body) {
 		console.log("P", success, body);
-		container.getFile({
-			filename: "test/test.txt"
-		}, function(success, body) {
+		file.get(function(success, body) {
 			console.log("G", success, body);
 		});
 	});
